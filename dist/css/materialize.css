@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.97.5 (http://materializecss.com)
+ * Materialize v0.97.5.apolzon (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -7974,7 +7974,6 @@ small {
 }
 
 .tabs .tab {
-  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;

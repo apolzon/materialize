@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.97.5 (http://materializecss.com)
+ * Materialize v0.97.5.apolzon (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -528,6 +528,10 @@ if ($) {
       var currAlignment = options.alignment;
       var activatesLeft, gutterSpacing;
 
+      if (origin.parents(".modal-content").length > 0) {
+        windowHeight = origin.parents(".modal-content").height();
+      }
+
       // Below Origin
       var verticalOffset = 0;
       if (options.belowOrigin === true) {
@@ -672,7 +676,8 @@ if ($) {
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
   });
-}( jQuery ));;(function($) {
+}( jQuery ));
+;(function($) {
     var _stack = 0,
     _lastID = 0,
     _generateID = function() {

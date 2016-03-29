@@ -81,6 +81,10 @@
       var currAlignment = options.alignment;
       var activatesLeft, gutterSpacing;
 
+      if (origin.parents(".modal-content").length > 0) {
+        windowHeight = origin.parents(".modal-content").height();
+      }
+
       // Below Origin
       var verticalOffset = 0;
       if (options.belowOrigin === true) {

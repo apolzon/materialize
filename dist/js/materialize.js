@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.97.5.apolzon (http://materializecss.com)
+ * Materialize v0.97.5.apolzon.2 (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -652,13 +652,16 @@ if ($) {
           // If menu open, add click close handler to document
           if (activates.hasClass('active')) {
             $(document).bind('click.'+ activates.attr('id') + ' touchstart.' + activates.attr('id'), function (e) {
-              if (!activates.is(e.target) && !origin.is(e.target) && (!origin.find(e.target).length) ) {
+              if (!activates.is(e.target) && !activates.find(e.target).length && !origin.is(e.target) && (!origin.find(e.target).length) ) {
                 hideDropdown();
                 $(document).unbind('click.'+ activates.attr('id') + ' touchstart.' + activates.attr('id'));
               }
             });
           }
         }
+      });
+      activates.click(function (e) {
+        hideDropdown();
       });
 
     } // End else
